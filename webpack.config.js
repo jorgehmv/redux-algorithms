@@ -20,13 +20,13 @@ module.exports = {
         new webpack.NoErrorsPlugin()
     ],
     module: {
-        preloaders: [
-            {
-                test: /\.js$/,
-                loader: 'eslint-loader',
-                exclude: /node_modules/
-            }
-        ],    
+        // preloaders: [
+        //     {
+        //         test: /\.js$/,
+        //         loader: 'eslint-loader',
+        //         exclude: /node_modules/
+        //     }
+        // ],    
         loaders: [
             { test: /\.js$/, loader: 'babel', exclude: /node_modules/, include: __dirname, query: { presets: [ 'react-hmre' ] } },
             { test: /\.json$/, loader: 'json-loader' },
