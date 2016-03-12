@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
-import Item from '../components/Item';
+import Item from '../../components/Item/Item';
 
 const Array = ({ items, swapping, swapped }) => (
-    <div>
+    <div className="row">
         {items.map((item, index) =>
             <Item
               key={index}

@@ -5,11 +5,11 @@ import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
 
 import config from './config';
-import createStore from './common/redux/create';
-import App from './common/components/App';
-import Html from './common/helpers/Html';
+import createStore from './redux/create';
 
-import array from './common/data/array';
+import App from './containers/App/App';
+import Html from './helpers/Html';
+import array from './data/array';
 
 const app = new Express();
 

@@ -1,24 +1,28 @@
 import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Array from './Array';
-import bubbleSort from '../algorithms/bubbleSort';
-import { swap, beginSorting, endSorting } from '../redux/modules/array';
+import Array from '../../containers/Array/Array';
+import bubbleSort from '../../algorithms/bubbleSort';
+import { swap, beginSorting, endSorting } from '../../redux/modules/array';
 
 let Sort = ({ items, swapping, swapped, actions }) => (
-    <div>
-      <button
-        className="btn btn-primary"
-        onClick={() => bubbleSort(items.slice(), actions)}
-      >
-        Bubble Sort
-      </button>
-      <Array
-        items={items}
-        swapping={swapping}
-        swapped={swapped}
-      />
-   </div>
+  <div>
+    <div className="row">
+      <div className="col-xs-12">
+        <button
+          className="btn btn-default"
+          onClick={() => bubbleSort(items.slice(), actions)}
+        >
+          Bubble Sort
+        </button>
+      </div>
+    </div>
+    <Array
+      items={items}
+      swapping={swapping}
+      swapped={swapped}
+    />
+  </div>
 );
 
 Sort.propTypes = {

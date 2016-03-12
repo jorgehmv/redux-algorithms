@@ -2,8 +2,8 @@ import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import createStore from '../common/redux/create';
-import App from '../common/components/App';
+import createStore from './redux/create';
+import App from './containers/App/App';
 
 const initialState = window.__INITIAL_STATE__;
 const store = createStore(initialState);

@@ -1,5 +1,5 @@
 export default {
-  items: [3, 5, 4, 9, 2, 1, 6, 8, 7],
+  items: [3, 5, 12, 9, 2, 10, 1, 11, 8, 7, 6, 4],
   swapping: [],
   swapped: []
 };

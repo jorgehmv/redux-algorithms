@@ -7,7 +7,7 @@ module.exports = {
         'webpack-hot-middleware/client',
         'bootstrap-sass!./src/theme/bootstrap.config.js',
         'font-awesome-webpack!./src/theme/font-awesome.config.js',
-        './src/client/index.js'
+        './src/client.js'
     ],
     output: {
         path: path.join(__dirname, 'dist'),
@@ -20,13 +20,6 @@ module.exports = {
         new webpack.NoErrorsPlugin()
     ],
     module: {
-        // preloaders: [
-        //     {
-        //         test: /\.js$/,
-        //         loader: 'eslint-loader',
-        //         exclude: /node_modules/
-        //     }
-        // ],    
         loaders: [
             { test: /\.js$/, loader: 'babel', exclude: /node_modules/, include: __dirname, query: { presets: [ 'react-hmre' ] } },
             { test: /\.json$/, loader: 'json-loader' },
