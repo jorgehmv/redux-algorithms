@@ -1,5 +1,13 @@
+const array = [2, 5, 1, 3, 6, 4];
+
 export default {
-  items: [3, 5, 12, 9, 2, 10, 1, 11, 8, 7, 6, 4],
-  swapping: [],
-  swapped: []
+  bubbleSortArray: {
+    items: array.slice()
+  },
+  insertionSortArray: {
+    items: array.slice()
+  },
+  quicksortArray: {
+    items: array.slice()
+  }
 };

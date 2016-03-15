@@ -7,12 +7,12 @@ export default function commandMiddleware() {
         return action(dispatch, getState);
       }
 
-      const { commandSteps, ...rest } = action;
-      if (!commandSteps) {
+      const { types, ...rest } = action;
+      if (!types) {
         return next(action);
       }
 
-      const [BEGIN, DO, END] = commandSteps;
+      const [BEGIN, DO, END] = types;
 
       next({ ...rest, type: BEGIN });
       return delay().then(() => {

@@ -1,0 +1,13 @@
+.item {
+  margin: 15px 0;
+      
+  :global(.panel-heading) {
+    min-height: 40px;
+  }
+  
+  :global(.panel-body) {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+  }
+}
