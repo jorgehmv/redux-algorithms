@@ -1,4 +1,6 @@
 import Express from 'express';
+import favicon from 'serve-favicon';
+import compression from 'compression';
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -12,6 +14,11 @@ import Html from './helpers/Html';
 import array from './data/array';
 
 const app = new Express();
+
+app.use(compression());
+app.use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')));
+
+app.use(Express.static(path.join(__dirname, '..', 'static')));
 
 // This is fired every time the server side receives a request
 app.use((req, res) => {
