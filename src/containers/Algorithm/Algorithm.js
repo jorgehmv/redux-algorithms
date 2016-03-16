@@ -31,8 +31,9 @@ let Algorithm = ({ implementation, info, array, actions }) => (
         swapped={array.swapped || []}
         comparing={array.comparing || []}
       />
+      <h5>Code:</h5>
       <pre>
-        {info.source}
+        {info.pseudocode}
       </pre>
     </div>
   </div>

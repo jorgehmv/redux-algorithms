@@ -23,13 +23,11 @@ const quicksort = (array, lo, hi, actions) => {
   }
 };
 
-const startQuicksort = (array, actions) => {
+export default (array, actions) => {
   actions.beginSorting();
   quicksort(array, 0, array.length - 1, actions);
   actions.endSorting();
 };
-
-export default startQuicksort;
 
 export const Info = {
   id: 'Quicksort',
@@ -40,7 +38,30 @@ export const Info = {
                'sort the sub-arrays.',
   link: 'https://en.wikipedia.org/wiki/Quicksort',
   linkSource: 'Wikipedia',
-  source: `${startQuicksort.toString().replace(/\t/g, '')}\n\n` +
-          `${quicksort.toString().replace(/\t/g, '')}\n\n` +
-          `${partition.toString().replace(/\t/g, '')}\n\n`
+  pseudocode: '' +
+`function partition(array, lo, hi) {
+  const pivot = array[hi];
+  let i = lo;
+
+  for (let j = lo; j <= hi - 1; j++) {
+    if (array[j] <= pivot) {
+      swap(array[i], array[j]);
+      i++;
+    }
+  }
+
+  swap(array[i], array[hi]);
+  return i;
+};
+
+function quicksort(array, lo, hi) => {
+  if (lo < hi) {
+    const p = partition(array, lo, hi);
+    quicksort(array, lo, p - 1);
+    quicksort(array, p + 1, hi);
+  }
+};
+
+// call to quicksort to sort the entire array
+quicksort(array, 0, array.length - 1);`
 };

@@ -1,6 +1,6 @@
 import { swap, compare } from './array-operations';
 
-const bubbleSort = (array, actions) => {
+export default (array, actions) => {
   actions.beginSorting();
 
   let swapped = false;
@@ -17,8 +17,6 @@ const bubbleSort = (array, actions) => {
   actions.endSorting();
 };
 
-export default bubbleSort;
-
 export const Info = {
   id: 'BubbleSort',
   name: 'Bubble Sort',
@@ -30,5 +28,17 @@ export const Info = {
                'that the list is sorted.',
   link: 'https://en.wikipedia.org/wiki/Bubble_sort',
   linkSource: 'Wikipedia',
-  source: `${bubbleSort.toString().replace(/\t/g, '')}`
+  pseudocode: '' +
+`function bubbleSort(array) {
+  let swapped;
+  do {
+    swapped = false;
+    for (let i = 1; i < array.length; i++) {
+      if (array[i - 1] > array[i]) {
+        swap(array[i - 1], array[i]);
+        swapped = true;
+      }
+    }
+  } while (swapped);
+}`
 };
