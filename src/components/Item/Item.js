@@ -24,7 +24,7 @@ const getStyle = (swapping, swapped, comparing) => {
   }
 
   if (comparing) {
-    return 'primary';
+    return 'warning';
   }
 
   return 'default';

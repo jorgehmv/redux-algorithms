@@ -1,6 +1,6 @@
 {
   "javascript": {
-    "main": "http://localhost:3001/dist/main-3d9f83f6c0d6cb53cdf9.js"
+    "main": "http://localhost:3001/dist/main-ecaf6be06a26bf3d2d99.js"
   },
   "styles": {},
   "assets": {
@@ -14,6 +14,11 @@
     "./src/components/Navbar/Navbar.scss": {
       "github": "github___1xBB4",
       "_style": ".github___1xBB4 {\n  font-size: 25px;\n  line-height: 20px;\n}\n"
+    },
+    "./src/components/Overview/Overview.scss": {
+      "overview": "overview___1T3AZ",
+      "github": "github___DB__o",
+      "_style": "/**\r\n *  Define scss variables here.\r\n *\r\n *  Available options for Bootstrap:\r\n *  http://getbootstrap.com/customize/\r\n *\r\n */\n.overview___1T3AZ {\n  background-color: #5bc0de;\n  color: #FFF;\n}\n\n.overview___1T3AZ .github___DB__o {\n  margin-top: 30px;\n  color: #FFF;\n  display: inline-block;\n}\n\n.overview___1T3AZ .github___DB__o:hover {\n  text-decoration: none;\n}\n"
     },
     "./src/components/Item/Item.scss": {
       "item": "item___3Hzv3",
