@@ -34,3 +34,8 @@ node_modules
 
 #Visual Studio
 .vscode
+jsconfig.json
+
+webpack-assets.json
+webpack-stats.json
+dist/
