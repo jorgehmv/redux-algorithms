@@ -1,6 +1,7 @@
 import Express from 'express';
 import favicon from 'serve-favicon';
 import compression from 'compression';
+import path from 'path';
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
