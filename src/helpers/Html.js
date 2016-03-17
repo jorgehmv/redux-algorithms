@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/server';
 import serialize from 'serialize-javascript';
 import Helmet from 'react-helmet';
 
+import Analytics from '../components/Analytics/Analytics';
+
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
  * Used in server-side code only to wrap the string output of the
@@ -43,6 +45,8 @@ const Html = ({ assets, component, store }) => {
         { Object.keys(assets.styles).length === 0 ?
           <style dangerouslySetInnerHTML={{ __html: require('../theme/bootstrap.config.js') }} />
           : null }
+
+        <Analytics />
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: (content) }} />
